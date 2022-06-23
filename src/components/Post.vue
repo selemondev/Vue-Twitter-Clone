@@ -87,7 +87,9 @@ const unlikeTweet = async () => {
 }
 
 const deleteTweet = async () => {
-     await deleteDoc(doc(db, "posts", props.id));
+      if(props.id === auth.currentUser.uid) {
+       await deleteDoc(doc(db, "posts", props.id));
+      }
 }
 </script>
 <template>
@@ -113,7 +115,7 @@ const deleteTweet = async () => {
             </div>
             <DotsHorizontalIcon class="dark:text-gray-600 text-black h-7 w-7 self-start"/>
         </div>
-          <div class="text-[#6e767d] pt-2 flex justify-between md:w-[500px]">
+          <div class="text-[#6e767d] pt-2 flex justify-between w-10/12">
                  <div class="flex items-center space-x-1 group">
             <div class="icon-style group-hover:bg-[#1d9bf0] group-hover:bg-opacity-10">
               <i class="fa-solid fa-comment" @click="unlikeTweet"></i>
@@ -148,7 +150,7 @@ const deleteTweet = async () => {
             </div>
             </div>
 
-        <div class="flex items-center space-x-1 group">
+        <div class="flex items-center space-x-1 group" v-if="props.id === auth.currentUser.uid">
               <div class="icon-style group-hover:bg-red-600/10" @click="deleteTweet()">
                 <TrashIcon class="h-5 group-hover:text-red-600" />
               </div>
