@@ -70,11 +70,8 @@ watchEffect(() => {
 
 watchEffect(() => {
   liked.value = likes.value.findIndex((post) => post.id === auth.currentUser.uid ) !== -1;
-});
-
-watchEffect(() => {
   disliked.value = dislikes.value.findIndex((post) => post.id === auth.currentUser.uid ) !== -1;
-})
+});
 const likeTweet = async () => {
       await setDoc(doc(db, "posts", props.id, "likes", auth.currentUser.uid), {
             user: auth.currentUser.displayName,
