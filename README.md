@@ -4,7 +4,7 @@ Twitter Clone made with Vue 3 and Firebase Version 9.
 
 ## Config Keys
 
-Add your own firebase config keys in the Firebase/firebaseConfig.js directory.
+Add your own Firebase config keys in the firebaseConfig.js file.
 
 ## Recommended IDE Setup
 
