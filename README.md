@@ -1,6 +1,10 @@
 # Twitter
 
-This template should help get you started developing with Vue 3 in Vite.
+Twitter Clone made with Vue 3 and Firebase Version 9.
+
+## Config Keys
+
+Add your own firebase config keys in the Firebase/firebaseConfig.js directory.
 
 ## Recommended IDE Setup
 

@@ -1,5 +1,5 @@
 <script setup>
-import { DotsHorizontalIcon,TrashIcon, SwitchHorizontalIcon, HeartIcon,ThumbDownIcon as thumbDownIcon, ShareIcon} from "@heroicons/vue/outline";
+import { DotsHorizontalIcon,SwitchHorizontalIcon, HeartIcon,ThumbDownIcon as thumbDownIcon, ShareIcon} from "@heroicons/vue/outline";
 import { ThumbDownIcon } from "@heroicons/vue/solid"
 import { ref, watchEffect} from "vue";
 import { auth, db } from "../firebase/firebaseConfig";
@@ -86,12 +86,9 @@ const unlikeTweet = async () => {
      await deleteDoc(doc(db, "posts", props.id, "likes", auth.currentUser.uid));
 }
 
-const deleteTweet = async () => {
-   await deleteDoc(doc(db, "posts", props.id));
-}
 </script>
 <template>
-<div class="p-2 flex cursor-pointer border-b dark:border-gray-700 border-gray-200">
+<div class="p-2 flex cursor-pointer border-b dark:border-gray-800 border-gray-200">
     <img :src="props.profile" :alt="props.username" class="h-11 w-11 rounded-full mr-4" />
     <div class="flex flex-col space-y-1 w-full">
         <div class="flex justify-between items-center">
@@ -146,12 +143,6 @@ const deleteTweet = async () => {
                 {{dislikes.length}}
               </span>
             </div>
-            </div>
-
-            <div class="flex items-center space-x-1 group">
-              <div class="icon-style group-hover:bg-red-600/10" @click="deleteTweet()">
-                <TrashIcon class="h-5 group-hover:text-red-600" />
-              </div>
             </div>
 
           <div class="icon-style group" @click="startShare()">
