@@ -2,7 +2,7 @@
 import { PhotographIcon, CalendarIcon, ChartBarIcon, XIcon, EmojiHappyIcon, } from "@heroicons/vue/outline";
 import { addDoc, collection, serverTimestamp} from "@firebase/firestore";
 import { getDownloadURL, ref as storageRef, uploadBytes} from "firebase/storage";
-import { db, auth, storage } from "../Firebase/firebaseConfig";
+import { auth, db, storage } from "../firebaseConfig";
 import { useToast } from "vue-toastification";
 import EmojiPicker from "vue3-emoji-picker";
 import "../../node_modules/vue3-emoji-picker/dist/style.css";
