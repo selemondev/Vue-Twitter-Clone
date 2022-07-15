@@ -55,11 +55,11 @@ async function sendTweet() {
 };
 </script>
 <template>
-<div :class="[loading ? ' flex overflow-y-scroll scrollbar-hide border-b dark:border-gray-600 border-gray-300 p-3 space-x-3 opacity-60' : 'flex overflow-y-scroll scrollbar-hide border-b dark:border-gray-600 border-gray-300 p-3 space-x-3']">
+<div :class="[loading ? ' flex overflow-y-scroll scrollbar-hide border-b dark:border-gray-800 border-gray-300 p-3 space-x-3 opacity-60' : 'flex overflow-y-scroll scrollbar-hide border-b dark:border-gray-600 border-gray-300 p-3 space-x-3']">
     <div>
         <img :src="auth.currentUser.photoURL" class="h-11 w-11 rounded-full mr-4" />
     </div>
-    <div class="w-full divide-y dark:divide-gray-600 divide-gray-400">
+    <div class="w-full divide-y dark:divide-gray-800 divide-gray-800">
         <div>
             <textarea v-model="inputEl" placeholder="What's happening?" class="w-full min-h-[52px] text-lg tracking-wide bg-transparent outline-none placeholder-gray-500 dark:placeholder-gray-400 dark:text-white text-black" />
         <div v-if="selectedImage">
