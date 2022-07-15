@@ -3,7 +3,7 @@ import TwitterIcon from "../assets/twitter-icon.png";
 import SidebarLink from "./SidebarLink.vue";
 import { DotsHorizontalIcon } from "@heroicons/vue/outline";
 import { watchEffect, ref } from "vue";
-import { auth, db } from "../Firebase/firebaseConfig";
+import { auth, db } from "../firebaseConfig";
 import { getDoc, doc } from "firebase/firestore";
 import { signOut } from "@firebase/auth";
 import { useRouter } from "vue-router";

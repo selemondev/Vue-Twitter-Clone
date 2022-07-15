@@ -2,7 +2,7 @@
 import { useDark, useToggle } from "@vueuse/core";
 import { SunIcon, MoonIcon} from "@heroicons/vue/solid";
 import FeedInput from "../components/FeedInput.vue";
-import { db, auth } from "../firebase/firebaseConfig.js";
+import { auth, db } from "../firebaseConfig";
 import { signOut } from "firebase/auth";
 import { collection, query, onSnapshot, orderBy} from "firebase/firestore";
 import { watchEffect ,ref } from "vue";

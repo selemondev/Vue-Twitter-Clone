@@ -2,7 +2,7 @@
 import { DotsHorizontalIcon,SwitchHorizontalIcon, HeartIcon,ThumbDownIcon as thumbDownIcon, ShareIcon} from "@heroicons/vue/outline";
 import { ThumbDownIcon } from "@heroicons/vue/solid"
 import { ref, watchEffect} from "vue";
-import { auth, db } from "../firebase/firebaseConfig";
+import { auth, db } from "../firebaseConfig";
 import { useShare } from '@vueuse/core'
 import { setDoc, doc, deleteDoc, collection, query, onSnapshot} from "firebase/firestore";
 const likes = ref([]);

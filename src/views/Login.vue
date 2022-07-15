@@ -1,6 +1,6 @@
 <script setup>
 import TwitterIcon from "../assets/twitter-icon.png";
-import { auth, db} from "../Firebase/firebaseConfig";
+import { auth, db } from "../firebaseConfig";
 import { GoogleAuthProvider, signInWithPopup} from "firebase/auth";
 import { setDoc, doc } from "firebase/firestore";
 import { useRouter } from "vue-router";
