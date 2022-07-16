@@ -1,7 +1,7 @@
 <script setup>
 import Sidebar from '../components/Sidebar.vue';
 import Feed from '../components/Feed.vue';
-import Widget from '../components/Widget.vue';
+import Widget from "../components/Widget.vue";
 </script>
 
 <template>
